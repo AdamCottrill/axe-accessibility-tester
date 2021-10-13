@@ -1,0 +1,28 @@
+* Axe Accessibility Tester
+
+A small test app to that illustrates how Axe accessibility
+([[https://www.deque.com/axe/]]) tool can be used to generate
+Accessibility reports.
+
+clone the repository into a convenient directory, and install the
+associated dependencies:
+
+  yarn install
+
+To generate the reports:
+
+ 1. update the list of pages to test by providing a url and report
+    name in the file
+ 2. start the server in production mode (or without the Django debug-
+    toolbar). Update the DOMAIN argument in axe.test.js with the
+    corresponding host and port.
+ 3. run the axe tests in a separate console using:
+
+    > yarn test
+
+ 4. after the tests are complete, the associated reports can be found
+    in ~/axe_reports.
+
+ This script could easily be re-factored into a standalone function
+ that accepts target urls and writes the reports to a specific output
+ directory.
